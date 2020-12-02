@@ -1,4 +1,4 @@
-package io.heroku.homehunt;
+package com.heroku.homehunt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

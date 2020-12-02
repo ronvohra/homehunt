@@ -1,4 +1,4 @@
-package io.heroku.homehunt;
+package com.heroku.homehunt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
