@@ -1,9 +1,11 @@
 package io.github.ronvohra;
 
 import io.quarkus.test.junit.NativeImageTest;
+import org.junit.jupiter.api.Disabled;
 
 @NativeImageTest
-public class NativeGreetingResourceIT extends GreetingResourceTest {
+@Disabled
+public class NativeHomeResourceIT extends HomeResourceTest {
 
     // Execute the same tests but in native mode.
 }
