@@ -17,6 +17,7 @@
     <quarkus-plugin.version>1.10.2.Final</quarkus-plugin.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
+    <fmt-maven-plugin.version>2.10</fmt-maven-plugin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -62,6 +63,12 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>
     </dependency>
+    <!--Test scope-->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-panache-mock</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-junit5</artifactId>
@@ -104,6 +111,18 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.coveo</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>${fmt-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <profiles>
@@ -132,6 +151,18 @@
                     <maven.home>${maven.home}</maven.home>
                   </systemPropertyVariables>
                 </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>com.coveo</groupId>
+            <artifactId>fmt-maven-plugin</artifactId>
+            <version>${fmt-maven-plugin.version}</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>format</goal>
+                </goals>
               </execution>
             </executions>
           </plugin>

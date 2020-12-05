@@ -19,7 +19,7 @@ import org.jboss.logmanager.Logger;
 @Path("/homes")
 @RequestScoped
 public class HomeResource {
-  private final static Logger LOG = Logger.getLogger(HomeResource.class.getName());
+  private static final Logger LOG = Logger.getLogger(HomeResource.class.getName());
 
   @POST
   @Transactional
