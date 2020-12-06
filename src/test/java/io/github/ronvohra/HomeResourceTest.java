@@ -15,7 +15,7 @@ public class HomeResourceTest {
 
   @Test
   public void getHomesReturnsAllHomes() {
-    given().when().get("/homes").then().statusCode(200).body("size()", is(2));
+    given().when().get("/home").then().statusCode(200).body("size()", is(2));
   }
 
   @Test
@@ -25,9 +25,9 @@ public class HomeResourceTest {
         .header("Content-Type", "application/json")
         .body(home)
         .when()
-        .post("/homes")
+        .post("/home")
         .then()
-        .statusCode(200)
+        .statusCode(201)
         .body("streetAddress", is(home.streetAddress));
   }
 
