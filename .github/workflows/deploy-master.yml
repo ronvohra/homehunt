@@ -38,18 +38,15 @@ jobs:
         args: container:login
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        HEROKU_APP: ${{ secrets.HEROKU_APP }}
     - name: Build and Push to Heroku Registry
       uses: actions/heroku@master
       with:
-        args: container:push web
+        args: container:push -a ${{ secrets.HEROKU_APP }} web
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        HEROKU_APP: ${{ secrets.HEROKU_APP }}
     - name: Trigger release in Heroku
       uses: actions/heroku@master
       with:
-        args: container:release web
+        args: container:release -a ${{ secrets.HEROKU_APP }} web
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        HEROKU_APP: ${{ secrets.HEROKU_APP }}
