@@ -7,5 +7,5 @@ import org.junit.jupiter.api.Disabled;
 @Disabled
 public class NativeHomeResourceIT extends HomeResourceTest {
 
-    // Execute the same tests but in native mode.
+  // Execute the same tests but in native mode.
 }
