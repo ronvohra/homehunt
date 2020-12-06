@@ -28,11 +28,12 @@ public class HomeResourceTest {
         .post("/home")
         .then()
         .statusCode(201)
-        .body("streetAddress", is(home.streetAddress));
+        .body("url", is(home.url));
   }
 
   private static Home createHome() {
     var home = new Home();
+    home.url = "http://zoopla.co.uk/nice-house";
     home.streetAddress = "1600 Pennsylvania Ave";
     home.numBedrooms = 100;
     home.numBathrooms = 200;
