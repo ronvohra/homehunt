@@ -1,0 +1,10 @@
+# https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
+setup:
+  addons:
+  - plan: heroku-postgresql
+    as: DATABASE
+build:
+  docker:
+    web: Dockerfile.heroku
+run:
+  web: java -Dquarkus.http.port=$PORT $JAVA_OPTS -jar target/*-runner.jar
