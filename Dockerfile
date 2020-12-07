@@ -19,4 +19,4 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3
 WORKDIR /work/
 COPY target/*-runner /work/application
 RUN chmod 775 /work
-CMD ./application -Dquarkus.http.host=0.0.0.0 -Dquarkus.http.port=${PORT}
+CMD chmod +x application && ./application -Dquarkus.http.host=0.0.0.0 -Dquarkus.http.port=${PORT}
