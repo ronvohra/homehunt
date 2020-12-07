@@ -5,6 +5,6 @@ setup:
     as: DATABASE
 build:
   docker:
-    web: Dockerfile.heroku
+    web: Dockerfile
 run:
   web: java -Dquarkus.http.port=$PORT $JAVA_OPTS -jar target/*-runner.jar
