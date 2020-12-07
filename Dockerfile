@@ -24,4 +24,4 @@ COPY --chown=1001:root target/*-runner /work/application
 USER 1001
 
 # Port picked up by Heroku $PORT, instead of EXPOSE 8080 from the template
-CMD ["sh", "/application", "-Dquarkus.http.host=0.0.0.0", "-Dquarkus.http.port=${PORT}"]
+CMD ["sh", "./application", "-Dquarkus.http.host=0.0.0.0", "-Dquarkus.http.port=${PORT}"]
