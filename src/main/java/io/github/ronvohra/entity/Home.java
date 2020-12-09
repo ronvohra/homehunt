@@ -8,6 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Home extends PanacheEntityBase {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public Integer id;
+
   public String url;
   public String streetAddress;
   public String nearestStation;
@@ -18,7 +22,4 @@ public class Home extends PanacheEntityBase {
   public Integer numBedrooms;
   public Integer numBathrooms;
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
 }
