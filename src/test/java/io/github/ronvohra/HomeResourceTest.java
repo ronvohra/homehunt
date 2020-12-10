@@ -34,6 +34,7 @@ public class HomeResourceTest {
   private static Home createHome() {
     var home = new Home();
     home.url = "http://zoopla.co.uk/nice-house";
+    home.rent = 99999;
     home.streetAddress = "1600 Pennsylvania Ave";
     home.numBedrooms = 100;
     home.numBathrooms = 200;
