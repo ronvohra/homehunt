@@ -1,6 +1,7 @@
 create table Home (
     id int not null,
     url varchar(500) not null,
+    rent int not null,
     streetAddress varchar(50) not null,
     numBedrooms int not null,
     numBathrooms int not null,

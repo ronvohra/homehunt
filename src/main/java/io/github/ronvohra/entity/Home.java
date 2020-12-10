@@ -13,6 +13,7 @@ public class Home extends PanacheEntityBase {
   public Integer id;
 
   public String url;
+  public Integer rent;
   public String streetAddress;
   public String nearestStation;
   public String directCentralStation;
@@ -21,5 +22,4 @@ public class Home extends PanacheEntityBase {
   public Integer timeToCentral;
   public Integer numBedrooms;
   public Integer numBathrooms;
-
 }
